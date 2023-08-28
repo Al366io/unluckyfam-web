@@ -1,14 +1,33 @@
-import React from "react";
+"use client"
+import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+
+const pages = ["About", "Lyrics", "Merch", "Music", "Who are we?"];
+
 export default function Navbar(): React.JSX.Element {
     return (
-        <>
-            <nav className="bg-white border-gray-200 dark:bg-gray-900">
-                <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                NAVBAR</div>
-            </nav>
-        </>
+        <nav>
+            <div className="flex items-center justify-between p-6 mx-auto text-gray-600 dark:text-gray-300">
+                <div className="flex w-screen gap-3">
+                    <Link href="/">
+                        <Image
+                            src="/images/logo.png"
+                            alt="Logo"
+                            width={50}
+                            height={50}
+                        />
+                    </Link>
+                    <div className="flex items-center w-screen justify-center gap-10">
+                        {pages.map((page) => (
+                            <Link href={"/" + page.toLowerCase()}>
+                                {page}
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </nav>
     );
 }
