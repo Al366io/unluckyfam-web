@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Footer from "../../components/Footer/Footer";
+import Navbar from "../../components/Navbar/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,14 +12,14 @@ export const metadata = {
 
 export default function RootLayout({ children }: {
     children: React.ReactNode;
-}) {
+}): React.JSX.Element {
     return (
-        <html lang="en">
-            <body className="text-white bg-black">
-                {/* <Navbar /> */}
-                {children}
+        <>
+            <main className="flex flex-col h-screen justify-between bg-black text-white">
+                <Navbar />
+                    {children}
                 <Footer />
-            </body>
-        </html>
+            </main>
+        </>
     );
 }
