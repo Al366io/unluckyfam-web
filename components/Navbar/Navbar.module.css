@@ -1,6 +1,6 @@
 
 .imgContainer {
-    width: 300px;
+    width: 350px;
     height: 100%;
     overflow: hidden; /* Hide the parts that don't fit */
     margin-left: 3%;
@@ -16,12 +16,32 @@
     width: 100vw;
     margin-top: 1%;
     height: 10vh;
+    position: relative;
 }
 
 .menuContainer {
     display: flex;
+    justify-content: center;
+    width: 85%;
     align-items: center;
     gap: 5%;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.link:hover {
+    scale: 1.1;
+}
+
+.innerNavbarContainer {
+    display: flex;
     width: 100%;
-    margin-left: 7%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 22;
 }

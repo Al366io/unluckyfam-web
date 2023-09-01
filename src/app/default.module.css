@@ -11,5 +11,14 @@
 
 .video {
     width: 100%;
-    max-width: 700px;
+    max-width: 900px;
+}
+
+.mainContainer {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
 }

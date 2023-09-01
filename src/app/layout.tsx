@@ -1,9 +1,10 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Albert_Sans, Inter } from "next/font/google";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
+import styles from "./default.module.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Albert_Sans({subsets: ["latin"], weight: '300'} )
 
 export const metadata = {
     title: "Unlucky Fam",
@@ -15,7 +16,7 @@ export default function RootLayout({ children }: {
 }): React.JSX.Element {
     return (
         <>
-            <main className="flex flex-col h-screen justify-between bg-black text-white">
+            <main className={`${inter.className} ${styles.mainContainer}`}>
                 <Navbar />
                     {children}
                 <Footer />
