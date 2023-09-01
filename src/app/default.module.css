@@ -1,0 +1,15 @@
+
+.LogoContainer3D {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.video {
+    width: 100%;
+    max-width: 700px;
+}
