@@ -16,3 +16,7 @@
     border-radius: 8px;
     padding: 8px;
 }
+
+.footerLink:hover {
+    scale: 1.05;
+}
