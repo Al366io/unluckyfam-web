@@ -24,20 +24,6 @@ export default function Navbar(): React.JSX.Element {
                         className={navbarStyles.unluckySignLogo2}
                     />
                 </Link>
-                {/* <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-3 h-3"
-                > }
-                    { <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                    />
-                </svg> */}
 
                 <div className={navbarStyles.innerNavbarContainer}>
                     <div className={navbarStyles.menuContainer}>
@@ -45,18 +31,29 @@ export default function Navbar(): React.JSX.Element {
                             <Link
                                 className={navbarStyles.link}
                                 href={
-                                    page === "HOME"
-                                        ? "/"
-                                        : "/" +
-                                          page
-                                              .toLowerCase()
-                                              .replace(/[\s?]/g, "")
-                                }
-                            >
+                                    page === "HOME" ? "/" : "/" + page.toLowerCase().replace(/[\s?]/g, "")
+                                }>
                                 {page}
                             </Link>
                         ))}
                     </div>
+                </div>
+                {/* burger */ }
+                <div className={navbarStyles.burgerContainer}>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1}
+                        stroke="currentColor"
+                        className={navbarStyles.burgerMenu}
+                    > 
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                        />
+                    </svg>
                 </div>
             </div>
         </nav>
