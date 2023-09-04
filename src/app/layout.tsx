@@ -15,12 +15,14 @@ export default function RootLayout({ children }: {
     children: React.ReactNode;
 }): React.JSX.Element {
     return (
-        <>
-            <main className={`${inter.className} ${styles.mainContainer}`}>
-                <Navbar />
-                    {children}
-                <Footer />
-            </main>
-        </>
+        <html lang="en">
+            <body>
+                <main className={`${inter.className} ${styles.mainContainer}`}>
+                    <Navbar />
+                        {children}
+                    <Footer />
+                </main>
+            </body>
+        </html>
     );
 }
