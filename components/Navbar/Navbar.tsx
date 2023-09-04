@@ -28,6 +28,7 @@ export default function Navbar(): React.JSX.Element {
                     <div className={navbarStyles.menuContainer}>
                         {pages.map((page) => (
                             <Link
+                                key={page}
                                 className={navbarStyles.link}
                                 href={
                                     page === "HOME" ? "/" : "/" + page.toLowerCase().replace(/[\s?]/g, "")
