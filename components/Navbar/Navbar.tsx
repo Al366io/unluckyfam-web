@@ -6,7 +6,7 @@ import SignWhiteNoBCK from "../../public/SignWhiteNoBCK.png";
 import FamWhiteNoBCK from "../../public/FamWhiteNoBCK.png";
 import navbarStyles from "./Navbar.module.css";
 
-const pages = ["HOME", "ABOUT", "LYRICS", "MERCH", "MUSIC"];
+const pages = ["HOME", "MUSIC", "LYRICS", "MERCH", "ABOUT"];
 
 export default function Navbar(): React.JSX.Element {
     return (
@@ -24,7 +24,6 @@ export default function Navbar(): React.JSX.Element {
                         className={navbarStyles.unluckySignLogo2}
                     />
                 </Link>
-
                 <div className={navbarStyles.innerNavbarContainer}>
                     <div className={navbarStyles.menuContainer}>
                         {pages.map((page) => (
@@ -38,7 +37,6 @@ export default function Navbar(): React.JSX.Element {
                         ))}
                     </div>
                 </div>
-                {/* burger */ }
                 <div className={navbarStyles.burgerContainer}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
