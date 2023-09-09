@@ -59,14 +59,16 @@ export default function ThreeJSLogo() {
          * Sizes
          */
         const sizes = {
-            width: window.innerWidth,
-            height: window.innerHeight,
+            width: window.innerWidth * 0.7,
+            height: window.innerHeight * 0.7,
         };
 
         window.addEventListener("resize", () => {
             // Update sizes
-            sizes.width = window.innerWidth;
-            sizes.height = window.innerHeight;
+            console.log(window.innerWidth);
+            console.log(window.innerHeight);
+            sizes.width = window.innerWidth * 0.7;
+            sizes.height = window.innerHeight * 0.7;
 
             // Update camera
             camera.aspect = sizes.width / sizes.height;
@@ -75,6 +77,9 @@ export default function ThreeJSLogo() {
             // Update renderer
             renderer.setSize(sizes.width, sizes.height);
             renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+            canvas.style.width = `${sizes.width}px`;
+            canvas.style.height = `${sizes.height}px`;
         });
 
         /**
