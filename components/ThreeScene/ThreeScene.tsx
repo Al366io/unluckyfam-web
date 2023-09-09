@@ -65,8 +65,6 @@ export default function ThreeJSLogo() {
 
         window.addEventListener("resize", () => {
             // Update sizes
-            console.log(window.innerWidth);
-            console.log(window.innerHeight);
             sizes.width = window.innerWidth * 0.65;
             sizes.height = window.innerHeight * 0.65;
 
@@ -139,7 +137,6 @@ export default function ThreeJSLogo() {
 
             // Update controls
             controls.update();
-            // console.log(mouseX)
 
             if (model) {
                 previousRotate = model.rotation.y;
@@ -160,7 +157,6 @@ export default function ThreeJSLogo() {
                         permanentRotation > 0.02
                             ? permanentRotation - 0.02 * permanentRotation
                             : permanentRotation + 0.02 * -permanentRotation;
-                    console.log(permanentRotation);
                 }
                 model.rotation.x = Math.sin(elapsedTime / 2) / 8;
                 model.rotation.y += permanentRotation;
