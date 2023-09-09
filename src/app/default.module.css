@@ -1,8 +1,11 @@
 
 .LogoContainer3D {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
+    /* position: absolute; */
+    /* left: 0;  */
+    /* right: 0;  */
+    /* margin-left: auto; 
+    margin-right: auto; 
+    width: 100px; Need a specific value to work */
     display: flex;
     justify-content: center;
     align-items: center;
