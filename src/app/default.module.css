@@ -12,6 +12,15 @@
 .video {
     width: 100%;
     max-width: 900px;
+    margin-bottom: 45px;
+    margin-right: 40px;
+}
+
+@media screen and (max-width: 667px) {
+    .video {
+        margin-bottom: 40px;
+        margin-right: 10px;
+    }
 }
 
 .mainContainer {
@@ -20,5 +29,5 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
+    height: 100dvh;
 }
