@@ -1,11 +1,13 @@
 "use client"
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader, GLTF } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { BarLoader } from "react-spinners";
 
 export default function ThreeJSLogo() {
     const canvasRef = useRef<HTMLCanvasElement>(null);
+    const [isModelLoaded, setIsModelLoaded] = useState(false);
 
     useEffect(() => {
         if (!canvasRef.current) {
@@ -26,10 +28,16 @@ export default function ThreeJSLogo() {
 
         const gltfLoader: GLTFLoader = new GLTFLoader();
 
-        gltfLoader.load("./UnluckyFam/logoFamLights.glb", (gltf: GLTF) => {
-            model = gltf.scene.children[0];
-            scene.add(model);
-        });
+        gltfLoader.load(
+            "./UnluckyFam/logoFamLights.glb",
+            (gltf: GLTF) => {
+                model = gltf.scene.children[0];
+                scene.add(model);
+                setIsModelLoaded(true);
+            },
+            undefined,
+            (error) => console.error("An error occurred", error)
+        );
 
         /**
          * Lights
@@ -182,5 +190,23 @@ export default function ThreeJSLogo() {
         };
     }, []);
 
-    return <canvas ref={canvasRef} className="webgl"></canvas>;
+    return (
+        <div style={{ position: 'relative' }}>
+            <canvas ref={canvasRef} className="webgl"></canvas>
+            {!isModelLoaded && (
+                <div style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                }}>
+                    <BarLoader color="hsla(168, 0%, 88%, 1)" />
+                </div>
+            )}
+        </div>
+    );
 }
