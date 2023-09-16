@@ -67,14 +67,14 @@ export default function ThreeJSLogo() {
          * Sizes
          */
         const sizes = {
-            width: window.innerWidth * 0.65,
-            height: window.innerHeight * 0.65,
+            width: window.innerWidth * 0.9,
+            height: window.innerHeight * 0.5,
         };
 
         window.addEventListener("resize", () => {
             // Update sizes
-            sizes.width = window.innerWidth * 0.65;
-            sizes.height = window.innerHeight * 0.65;
+            sizes.width = window.innerWidth * 0.9;
+            sizes.height = window.innerHeight * 0.5;
 
             // Update camera
             camera.aspect = sizes.width / sizes.height;
