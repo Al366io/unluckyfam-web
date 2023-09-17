@@ -25,7 +25,7 @@ export default function Footer(): React.JSX.Element {
                 redirectResult = 'https://www.youtube.com/@unluckyfam';
                 break;
             case 'soundcloud':
-                redirectResult = 'soundcloud.com/unluckyfam?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing';
+                redirectResult = 'https://www.soundcloud.com/unluckyfam?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing';
                 break;
             case 'spotify':
                 redirectResult = 'https://open.spotify.com/artist/1toypnVY7Dbdp6VHDJRpxL?flow_ctx=0a11f87a-869d-4f84-a3ac-b4c0a0288c27%3A1694898006';
