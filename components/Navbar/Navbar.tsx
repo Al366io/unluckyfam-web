@@ -1,13 +1,16 @@
+"use client";
 import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import SignWhiteNoBCK from "../../public/SignWhiteNoBCK.png";
 import FamWhiteNoBCK from "../../public/FamWhiteNoBCK.png";
 import navbarStyles from "./Navbar.module.css";
+import FadeMenu from "./FadeMenu/FadeMenu";
 
 const pages = ["HOME", "MUSIC", "LYRICS", "MERCH", "ABOUT"];
 
 export default function Navbar(): React.JSX.Element {
+
     return (
         <nav>
             <div className={navbarStyles.navbarContainer}>
@@ -29,30 +32,14 @@ export default function Navbar(): React.JSX.Element {
                             <Link
                                 key={page}
                                 className={navbarStyles.link}
-                                href={
-                                    page === "HOME" ? "/" : "/" + page.toLowerCase().replace(/[\s?]/g, "")
-                                }>
+                                href={page === "HOME" ? "/" : "/" + page.toLowerCase().replace(/[\s?]/g, "")}
+                            >
                                 {page}
                             </Link>
                         ))}
                     </div>
                 </div>
-                <div className={navbarStyles.burgerContainer}>
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={1}
-                        stroke="currentColor"
-                        className={navbarStyles.burgerMenu}
-                    > 
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                        />
-                    </svg>
-                </div>
+                <FadeMenu />
             </div>
         </nav>
     );

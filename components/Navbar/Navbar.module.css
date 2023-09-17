@@ -1,4 +1,3 @@
-
 .imgContainer {
     width: 300px;
     height: 100%;
@@ -31,11 +30,12 @@
 
 @media screen and (max-width: 667px) {
     .innerNavbarContainer {
-        display: none!important;
+        display: none !important;
     }
 }
 
 .navbarContainer {
+    z-index: 2; /* Higher than the mobile menu */
     display: flex;
     width: 100vw;
     margin-top: 1%;
@@ -76,7 +76,6 @@
     justify-content: center;
     align-items: center;
     margin-right: 3%;
-
 }
 
 .burgerMenu {
@@ -87,4 +86,24 @@
     .burgerContainer {
         display: flex;
     }
+
+    .link {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 4%;
+        width: 200px;
+    }
+
+    .link:hover {
+        scale: 1;
+    }
+}
+
+.hr {
+    position: absolute;
+    right: 0;
+    width: 90%;
+    height: 1px;
+    background-color: #e5e5e5;
+    margin-top: 1%;
 }
