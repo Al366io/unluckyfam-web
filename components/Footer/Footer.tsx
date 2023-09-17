@@ -1,8 +1,6 @@
 "use client"
 
 import React from "react";
-import Link from "next/link";
-import Image from "next/image";
 import footerStyles from "./Footer.module.css";
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
