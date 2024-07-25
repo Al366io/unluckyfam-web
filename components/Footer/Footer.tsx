@@ -13,28 +13,28 @@ library.add(fab);
 export default function Footer(): React.JSX.Element {
 
     const handleExternalRedirect = (site: string) => {
-        let redirectResult: string;
+        let redirectUrl: string;
     
         switch (site) {
             case 'ig':
-                redirectResult = 'https://www.instagram.com/unlucky_fam';
+                redirectUrl = 'https://www.instagram.com/unlucky_fam';
                 break;
             case 'yt': 
-                redirectResult = 'https://www.youtube.com/@unluckyfam';
+                redirectUrl = 'https://www.youtube.com/@unluckyfam';
                 break;
             case 'soundcloud':
-                redirectResult = 'https://www.soundcloud.com/unluckyfam?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing';
+                redirectUrl = 'https://www.soundcloud.com/unluckyfam?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing';
                 break;
             case 'spotify':
-                redirectResult = 'https://open.spotify.com/artist/1toypnVY7Dbdp6VHDJRpxL?flow_ctx=0a11f87a-869d-4f84-a3ac-b4c0a0288c27%3A1694898006';
+                redirectUrl = 'https://open.spotify.com/artist/1toypnVY7Dbdp6VHDJRpxL?flow_ctx=0a11f87a-869d-4f84-a3ac-b4c0a0288c27%3A1694898006';
                 break;
             default:
-                redirectResult = '';
+                redirectUrl = '';
                 break;
         }
     
-        if (redirectResult) {
-            window.location.assign(redirectResult);
+        if (redirectUrl) {
+            window.location.assign(redirectUrl);
         }
     }
 

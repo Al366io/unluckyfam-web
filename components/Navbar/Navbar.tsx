@@ -7,7 +7,7 @@ import FamWhiteNoBCK from "../../public/FamWhiteNoBCK.png";
 import navbarStyles from "./Navbar.module.css";
 import FadeMenu from "./FadeMenu/FadeMenu";
 
-const pages = ["HOME", "MUSIC", "LYRICS", "MERCH", "ABOUT"];
+const pages = ["HOME", "STORE", "MUSIC", "CONTACT", "ABOUT"];
 
 export default function Navbar(): React.JSX.Element {
 

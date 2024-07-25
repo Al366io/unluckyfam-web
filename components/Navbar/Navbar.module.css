@@ -2,7 +2,7 @@
     width: 300px;
     height: 100%;
     overflow: hidden;
-    margin-left: 2%;
+    margin-left: 13%;
 }
 .unluckySignLogo {
     object-fit: cover;
@@ -16,19 +16,17 @@
     width: 30%;
 }
 
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 668px) {
     .unluckySignLogo {
         display: none;
     }
 }
 
-@media screen and (max-width: 1121px) {
-    .unluckySignLogo2 {
-        display: flex;
-    }
+@media screen and (max-width: 800px) {
+
 }
 
-@media screen and (max-width: 667px) {
+@media screen and (max-width: 668px) {
     .innerNavbarContainer {
         display: none !important;
     }
@@ -46,8 +44,9 @@
 
 .menuContainer {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     width: 85%;
+    max-width: 800px;
     align-items: center;
     gap: 5%;
 }
@@ -67,7 +66,7 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    /* position: absolute; */
     top: 26px;
 }
 
@@ -87,6 +86,10 @@
         display: flex;
     }
 
+    .unluckySignLogo2 {
+        display: flex;
+    }
+
     .link {
         display: flex;
         justify-content: flex-end;
@@ -96,6 +99,10 @@
 
     .link:hover {
         scale: 1;
+    }
+
+    .imgContainer {
+        margin-left: 3%;
     }
 }
 

@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-export default function Whoarewe() {
+export default function store() {
     return (
         <div className="flex h-screen items-center justify-center">
-            THIS IS MY WHO ARE WE PAGE
+            THIS IS MY STORE PAGE
         </div>
     );
 }
