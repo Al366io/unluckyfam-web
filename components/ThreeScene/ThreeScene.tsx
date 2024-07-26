@@ -91,7 +91,6 @@ export default function ThreeJSLogo() {
         /**
          * Camera
          */
-        // Base camera
         const camera = new THREE.PerspectiveCamera(
             75,
             sizes.width / sizes.height,
@@ -142,8 +141,6 @@ export default function ThreeJSLogo() {
 
         const tick = () => {
             const elapsedTime = clock.getElapsedTime();
-
-            // Update controls
             controls.update();
 
             if (model) {
@@ -177,16 +174,11 @@ export default function ThreeJSLogo() {
             // Call tick again on the next frame
             window.requestAnimationFrame(tick);
         };
-
-        // Replace all the DOM manipulations with canvas, scene, and renderer
-
-        // Start the animation
+        
         const animationId = window.requestAnimationFrame(tick);
-
         // Cleanup function
         return () => {
             window.cancelAnimationFrame(animationId);
-            // Dispose Three.js objects here
         };
     }, []);
 

@@ -5,10 +5,10 @@ import MenuItem from "@mui/material/MenuItem";
 import Fade from "@mui/material/Fade";
 import navbarStyles from "../Navbar.module.css";
 import Link from "next/link";
+import { pages } from "../constants";
 
 
 export default function FadeMenu() {
-    const pages = ["HOME", "MUSIC", "LYRICS", "MERCH", "ABOUT"];
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
     const handleClick = (event: React.MouseEvent<HTMLElement>) => {

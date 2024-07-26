@@ -6,8 +6,7 @@ import SignWhiteNoBCK from "../../public/SignWhiteNoBCK.png";
 import FamWhiteNoBCK from "../../public/FamWhiteNoBCK.png";
 import navbarStyles from "./Navbar.module.css";
 import FadeMenu from "./FadeMenu/FadeMenu";
-
-const pages = ["HOME", "STORE", "MUSIC", "CONTACT", "ABOUT"];
+import { pages } from "./constants";
 
 export default function Navbar(): React.JSX.Element {
 
