@@ -2,9 +2,9 @@
 import React, { useState, useEffect } from "react";
 import StoreComponentStyles from "./StoreComponent.module.css";
 import Image from "next/image";
-import F from "../../public/F.jpg";
-import A from "../../public/A.jpg";
-import M from "../../public/M.jpg";
+import F from "../../public/UnluckyFam/F.jpg";
+import A from "../../public/UnluckyFam/A.jpg";
+import M from "../../public/UnluckyFam/M.jpg";
 
 export default function StoreComponent(): React.JSX.Element {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
