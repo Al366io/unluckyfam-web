@@ -1,4 +1,3 @@
-"use client";
 import * as React from "react";
 import MusicPlayerStyles from "./MusicPlayer.module.css";
 

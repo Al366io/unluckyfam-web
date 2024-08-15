@@ -1,0 +1,48 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagesWrapper {
+    display: flex;
+    justify-content: space-around;
+    height: 80%;
+    width: 60%;
+    gap: 5px;
+}
+
+.textWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    width: 100%;
+}
+
+
+.imageContainer {
+    width: 33%;
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    transition: opacity 1.5s ease-in-out;
+}
+
+@media (max-width: 790px) {
+    .imagesWrapper {
+        width: 100%;
+    }
+
+    .imageContainer {
+        display: none;
+    }
+
+    .imageContainer.active {
+        display: block;
+        width: 70%;
+    }
+}
