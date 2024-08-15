@@ -1,5 +1,6 @@
 .wrapper {
     display: flex;
+    height: 100%;
     width: 100%;
     flex-direction: column;
     justify-content: center;
@@ -9,7 +10,6 @@
 .imagesWrapper {
     display: flex;
     justify-content: space-around;
-    height: 80%;
     width: 60%;
     gap: 5px;
 }
@@ -34,7 +34,7 @@
 
 @media (max-width: 790px) {
     .imagesWrapper {
-        width: 100%;
+        width: 90%;
     }
 
     .imageContainer {
