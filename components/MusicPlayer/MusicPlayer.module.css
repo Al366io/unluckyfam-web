@@ -1,4 +1,23 @@
 .iframe {
-    width: 500px;
-    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 70%;
+}
+
+.wrapper {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 790px) {
+    .iframe {
+        width: 90%;
+        height: 70%;
+    }
 }
