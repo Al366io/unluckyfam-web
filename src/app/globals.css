@@ -15,3 +15,14 @@
         --background-end-rgb: 0, 0, 0;
     }
 }
+
+body {
+    background: linear-gradient(90deg, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb)));
+    color: rgb(var(--foreground-rgb));
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: background 0.5s, color 0.5s;
+}
