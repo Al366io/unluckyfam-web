@@ -2,7 +2,9 @@
     width: 300px;
     height: 100%;
     overflow: hidden;
-    margin-left: 13%;
+    position: absolute;
+    left: 0;
+    margin-left: 30px;
 }
 .unluckySignLogo {
     object-fit: cover;
@@ -16,30 +18,14 @@
     width: 30%;
 }
 
-@media screen and (max-width: 668px) {
-    .unluckySignLogo {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 800px) {
-
-}
-
-@media screen and (max-width: 668px) {
-    .innerNavbarContainer {
-        display: none !important;
-    }
-}
-
 .navbarContainer {
     z-index: 2; /* Higher than the mobile menu */
     display: flex;
     width: 100vw;
-    margin-top: 1%;
+    margin-top: 25px;
     height: 10vh;
     position: relative;
-    justify-content: space-between;
+    justify-content:center;
 }
 
 .menuContainer {
@@ -53,7 +39,7 @@
 
 .link {
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     flex-shrink: 0;
 }
 
@@ -64,26 +50,46 @@
 .innerNavbarContainer {
     display: flex;
     width: 100%;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    /* position: absolute; */
-    top: 26px;
+    margin-right: 55px;
 }
 
 .burgerContainer {
     display: none;
     justify-content: center;
     align-items: center;
-    margin-right: 3%;
 }
 
 .burgerMenu {
     width: 45px;
 }
 
-@media screen and (max-width: 668px) {
+.hr {
+    position: absolute;
+    right: 0;
+    width: 90%;
+    height: 1px;
+    background-color: #e5e5e5;
+    margin-top: 1%;
+}
+
+@media screen and (max-width: 790px) {
     .burgerContainer {
         display: flex;
+        justify-self: flex-end;
+    }
+
+    .unluckySignLogo {
+        display: none;
+    }
+
+    .innerNavbarContainer {
+        margin-right: 30px;
+    }
+
+    .menuContainer {
+        display: none !important;
     }
 
     .unluckySignLogo2 {
@@ -100,17 +106,4 @@
     .link:hover {
         scale: 1;
     }
-
-    .imgContainer {
-        margin-left: 3%;
-    }
-}
-
-.hr {
-    position: absolute;
-    right: 0;
-    width: 90%;
-    height: 1px;
-    background-color: #e5e5e5;
-    margin-top: 1%;
 }

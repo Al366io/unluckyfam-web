@@ -37,8 +37,8 @@ export default function Navbar(): React.JSX.Element {
                             </Link>
                         ))}
                     </div>
-                </div>
                 <FadeMenu />
+                </div>
             </div>
         </nav>
     );
