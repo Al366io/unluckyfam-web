@@ -34,6 +34,7 @@ export default function Navbar(): React.JSX.Element {
                                 href={page === "HOME" ? "/" : "/" + page.toLowerCase().replace(/[\s?]/g, "")}
                             >
                                 {page}
+                                <hr className={navbarStyles.divider} />
                             </Link>
                         ))}
                     </div>
