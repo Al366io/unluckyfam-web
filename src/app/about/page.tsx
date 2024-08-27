@@ -21,7 +21,7 @@ export default function About() {
 
         // // for android =  <a href={window.location.href} target='_blank' rel='noreferrer' download >
         // // if it's ios, redirect to the safari link
-        // const location = window.location;
+        const location = window.location;
 
         // // remove the protocol
         // const link = location.href.replace("http://", "").replace("https://", "");
