@@ -28,7 +28,7 @@ export default function About() {
         
         // const safariLink = `x-safari-https:${link}`;
         // window.location.href = safariLink;
-        window.open(location.href, '_system');
+        window.open(location.href, '_blank', 'location=yes, closebuttoncaption=Close, enableviewportscale=yes, toolbar=yes, closebuttoncaption=Close, popups=yes, toolbarcolor=#000000, closebuttoncolor=#ffffff, toolbartranslucent=no, closebuttontranslucent=no');
     };
     return (
         <div className="flex h-screen items-center justify-center">
