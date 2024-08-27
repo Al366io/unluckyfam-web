@@ -14,6 +14,9 @@ export default function About() {
         const link = location.href;
         const safariLink = `x-web-search://?${link}`; 
         window.location.href = safariLink;
+        setTimeout(() => {
+            window.location = location;
+        }, 10);
     }
     return (
         <div className="flex h-screen items-center justify-center">
