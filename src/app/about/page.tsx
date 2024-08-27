@@ -15,17 +15,20 @@ export default function About() {
 
     const redirect = () => {
         // see if it's ios
-        const isIOS = isAppleDevice();
-        if (!isIOS) return;
+        // const isIOS = isAppleDevice();
+        // if (!isIOS) return;
 
-        // if it's ios, redirect to the safari link
-        const location = window.location;
 
-        // remove the protocol
-        const link = location.href.replace("http://", "").replace("https://", "");
+        // // for android =  <a href={window.location.href} target='_blank' rel='noreferrer' download >
+        // // if it's ios, redirect to the safari link
+        // const location = window.location;
+
+        // // remove the protocol
+        // const link = location.href.replace("http://", "").replace("https://", "");
         
-        const safariLink = `x-safari-https:${link}`;
-        window.location.href = safariLink;
+        // const safariLink = `x-safari-https:${link}`;
+        // window.location.href = safariLink;
+        window.open(location.href, '_system');
     };
     return (
         <div className="flex h-screen items-center justify-center">
