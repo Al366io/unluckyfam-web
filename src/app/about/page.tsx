@@ -1,4 +1,5 @@
 "use client";
+import { PowerInputSharp } from "@mui/icons-material";
 import Image from "next/image";
 import { useEffect } from "react";
 
@@ -28,7 +29,12 @@ export default function About() {
         
         // const safariLink = `x-safari-https:${link}`;
         // window.location.href = safariLink;
-        window.open(location.href, '_blank', 'location=yes, closebuttoncaption=Close, enableviewportscale=yes, toolbar=yes, closebuttoncaption=Close, popups=yes, toolbarcolor=#000000, closebuttoncolor=#ffffff, toolbartranslucent=no, closebuttontranslucent=no');
+
+        // open window as a popup
+        const newWindow = window.open(location.href, "_blank", "width=200,height=100");
+        if (newWindow) {
+            newWindow.opener = null;
+        }
     };
     return (
         <div className="flex h-screen items-center justify-center">
