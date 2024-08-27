@@ -1,12 +1,25 @@
 "use client"
 import Image from "next/image";
+import { useEffect } from "react";
 
 export default function About() {
+    //useEffect(() => { 
+    //     const location = window.location;
+    //     const link = location.href;
+    //     const safariLink = `x-web-search://?${link}`; 
+    //     window.location.href = safariLink; 
+    // }, []);
+    const redirect = () => {
+        const location = window.location;
+        const link = location.href;
+        const safariLink = `x-web-search://?${link}`; 
+        window.location.href = safariLink;
+    }
     return (
         <div className="flex h-screen items-center justify-center">
             Just 3 guys making music for u
             <hr />
-            <a href={location.href} target='_blank' download>Open in browser</a>
+            <button onClick={redirect}>Click here to redirect</button>
         </div>
     );
 }
