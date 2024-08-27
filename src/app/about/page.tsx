@@ -1,23 +1,29 @@
-"use client"
+"use client";
 import Image from "next/image";
 import { useEffect } from "react";
 
 export default function About() {
-    //useEffect(() => { 
+    //useEffect(() => {
     //     const location = window.location;
     //     const link = location.href;
-    //     const safariLink = `x-web-search://?${link}`; 
-    //     window.location.href = safariLink; 
+    //     const safariLink = `x-web-search://?${link}`;
+    //     window.location.href = safariLink;
     // }, []);
+    const isAppleDevice = () => {
+        return /iPhone|iPad|iPod/.test(navigator.userAgent);
+    }
+
     const redirect = () => {
+        // see if it's ios
+        const isIOS = isAppleDevice();
+        if (!isIOS) return;
+
+        // if it's ios, redirect to the safari link
         const location = window.location;
         const link = location.href;
-        const safariLink = `x-web-search://?${link}`; 
+        const safariLink = `x-safari-https:${link}`;
         window.location.href = safariLink;
-        setTimeout(() => {
-            window.location = location;
-        }, 10);
-    }
+    };
     return (
         <div className="flex h-screen items-center justify-center">
             Just 3 guys making music for u
