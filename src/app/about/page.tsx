@@ -20,7 +20,10 @@ export default function About() {
 
         // if it's ios, redirect to the safari link
         const location = window.location;
-        const link = location.href;
+
+        // remove the protocol
+        const link = location.href.replace("http://", "").replace("https://", "");
+        
         const safariLink = `x-safari-https:${link}`;
         window.location.href = safariLink;
     };
