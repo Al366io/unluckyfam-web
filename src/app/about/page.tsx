@@ -14,7 +14,12 @@ export default function About() {
         return /iPhone|iPad|iPod/.test(navigator.userAgent);
     }
 
-    const redirect = () => {
+    useEffect(() => {
+        if (isAppleDevice()) {
+            window.alert("Looks like you're using an Apple device. Please open this page in Safari.");
+        }});
+
+    const redirectone = () => {
         // see if it's ios
         // const isIOS = isAppleDevice();
         // if (!isIOS) return;
@@ -31,16 +36,19 @@ export default function About() {
         // window.location.href = safariLink;
 
         // open window as a popup
-        const newWindow = window.open(location.href, "_blank", "width=200,height=100");
-        if (newWindow) {
-            newWindow.opener = null;
-        }
+        window.open(location.href, "_blank", "width=200,height=100");
     };
+
+    const redirecttwo = () => {
+        window.open(window.location.href, "popupWindow", "width=600,height=400,scrollbars=yes,resizable=yes");
+    }
+
     return (
         <div className="flex h-screen items-center justify-center">
             Just 3 guys making music for u
             <hr />
-            <button onClick={redirect}>Click here to redirect</button>
+            <button onClick={redirectone}>TRY ONE</button>
+            <button onClick={redirecttwo}>TRY TWO</button>
         </div>
     );
 }
