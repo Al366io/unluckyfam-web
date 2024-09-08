@@ -1,0 +1,9 @@
+{
+    "redirects": [
+        {
+            "source": "/",
+            "destination": "https://open.spotify.com/artist/1toypnVY7Dbdp6VHDJRpxL",
+            "permanent": true
+        }
+    ]
+}
