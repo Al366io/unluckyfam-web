@@ -2,16 +2,77 @@
     display: flex;
     height: 100%;
     width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .imagesWrapper {
     display: flex;
-    justify-content: space-around;
-    width: 60%;
-    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 30%;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 60%;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.text {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.priceBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.price {
+    font-size: 1.3rem;
+    padding: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.buyNow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.buyNow:disabled {
+    background-color: #393939;
+    cursor: not-allowed;
+}
+
+.ImgGallery {
+    width: 30%;
 }
 
 .textWrapper {
@@ -23,6 +84,11 @@
     width: 100%;
 }
 
+.subtitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
 
 .imageContainer {
     width: 33%;

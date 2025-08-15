@@ -1,18 +1,37 @@
 "use client";
-import Image from "next/image";
-import MusicPlayer from "../../../components/MusicPlayer/MusicPlayer";
 import React, { useEffect } from "react";
 import SecretAreaStyles from "./secret.module.css";
 
 export default function SecretArea() {
     return (
-        <div className="flex h-screen items-center justify-center">
-            <div className={SecretAreaStyles.container}>
-                <h1>Looks like you wanna enter the secret area</h1>
-                <h2>But you can&#39;t</h2>
-                <h3>Because it&#39;s a secret</h3>
-                <h4>Unless...</h4>
-                <button className={SecretAreaStyles.button}>I know the key</button>
+        <div className={SecretAreaStyles.container}>
+            {/* how to have a newline in h1?  */}
+            <h1 className={SecretAreaStyles.title}>
+                Welcome to the Secret Area
+            </h1>
+
+            <div>
+                <p>This is a place strictly reserved to peolpe inside the Unlucky Fam Community.</p>
+
+                <hr style={{ margin: "20px 0", border: 0 }} />
+                <h2> Inside, you'll have access to exclusive content like: </h2>
+                <ul style={{ listStyle: "disc", paddingLeft: "20px", marginTop: "10px", marginBottom: "10px" }}>
+                    <li>Unreleased and Unfinished Songs</li>
+                    <li>Work in Progress songs</li>
+                    <li>Behind the Scenes</li>
+                    <li>Exclusive and Discounted Merchandise</li>
+                </ul>
+            </div>
+            <p>If you have a code, enter it below:</p>
+            <div className={SecretAreaStyles.codeBox}>
+                <input
+                    type="text"
+                    className={SecretAreaStyles.input}
+                    placeholder="Enter your code here"
+                />
+                <button className={SecretAreaStyles.button}>
+                    Enter
+                </button>
             </div>
         </div>
     );
