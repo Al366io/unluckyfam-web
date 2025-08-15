@@ -14,7 +14,7 @@ export default function SecretArea() {
                 <p>This is a place strictly reserved to peolpe inside the Unlucky Fam Community.</p>
 
                 <hr style={{ margin: "20px 0", border: 0 }} />
-                <h2> Inside, you'll have access to exclusive content like: </h2>
+                <h2> Inside, you&apos;ll have access to exclusive content like: </h2>
                 <ul style={{ listStyle: "disc", paddingLeft: "20px", marginTop: "10px", marginBottom: "10px" }}>
                     <li>Unreleased and Unfinished Songs</li>
                     <li>Work in Progress songs</li>
