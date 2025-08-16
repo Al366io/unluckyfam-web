@@ -1,26 +1,20 @@
 .wrapper {
-    display: flex;
-    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 20px;
     width: 100%;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.imagesWrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30%;
-    height: 30%;
+    height: 100%;
+    padding: 20px;
 }
 
 .description {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 20px;
     align-items: center;
-    width: 30%;
-    height: 60%;
+    width: 100%;
 }
 
 .title {
@@ -72,7 +66,11 @@
 }
 
 .ImgGallery {
-    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0px 30px 30px 30px;
 }
 
 .textWrapper {
@@ -110,5 +108,22 @@
     .imageContainer.active {
         display: block;
         width: 70%;
+    }
+
+    .wrapper {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .description {
+        padding-top: 10px;
+        font-size: medium;
+        margin-bottom: 20px;
+    }
+    .description h1 {
+        font-size: 1.5rem;
+    }
+    .text {
+        font-size: 1rem;
     }
 }

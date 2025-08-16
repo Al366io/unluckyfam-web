@@ -10,16 +10,16 @@ export default function SecretArea() {
                 Welcome to the Secret Area
             </h1>
 
-            <div>
+            <div className={SecretAreaStyles.secret_description} >
                 <p>This is a place strictly reserved to peolpe inside the Unlucky Fam Community.</p>
 
                 <hr style={{ margin: "20px 0", border: 0 }} />
                 <h2> Inside, you&apos;ll have access to exclusive content like: </h2>
-                <ul style={{ listStyle: "disc", paddingLeft: "20px", marginTop: "10px", marginBottom: "10px" }}>
-                    <li>Unreleased and Unfinished Songs</li>
-                    <li>Work in Progress songs</li>
-                    <li>Behind the Scenes</li>
-                    <li>Exclusive and Discounted Merchandise</li>
+                <ul className={SecretAreaStyles.list} >
+                    <li> - Unreleased and Unfinished Songs</li>
+                    <li> - Work in Progress songs</li>
+                    <li> - Behind the Scenes</li>
+                    <li> - Exclusive and Discounted Merchandise</li>
                 </ul>
             </div>
             <p>If you have a code, enter it below:</p>

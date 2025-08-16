@@ -16,6 +16,6 @@ export default function ImgGallery() {
     ];
 
     return (
-        <ImageGallery items={images} showPlayButton={false} />
+        <ImageGallery items={images} showPlayButton={false} thumbnailPosition="left"/>
     );
 }
