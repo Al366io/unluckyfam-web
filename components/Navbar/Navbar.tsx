@@ -2,7 +2,7 @@
 import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import SignWhiteNoBCK from "../../public/SignWhiteNoBCK.png";
+import SignWhiteNoBCK from "../../public/sign-white-vec.svg";
 import FamWhiteNoBCK from "../../public/FamWhiteNoBCK.png";
 import navbarStyles from "./Navbar.module.css";
 import FadeMenu from "./FadeMenu/FadeMenu";
