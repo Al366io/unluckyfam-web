@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader, GLTF } from "three/examples/jsm/loaders/GLTFLoader.js";
-import { BarLoader } from "react-spinners";
+import { CircleLoader } from "react-spinners";
 
 export default function ThreeJSLogo() {
     const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -29,14 +29,14 @@ export default function ThreeJSLogo() {
         const gltfLoader: GLTFLoader = new GLTFLoader();
 
         gltfLoader.load(
-            "./UnluckyFam/logoFamLights.glb",
-            (gltf: GLTF) => {
-                model = gltf.scene.children[0];
+            "/UnluckyFam/logoFamLights.glb",
+            (gltf) => {
+                model = gltf.scene;
                 scene.add(model);
                 setIsModelLoaded(true);
             },
             undefined,
-            (error) => console.error("An error occurred", error)
+            (err) => console.error("GLTF load error:", err)
         );
 
         /**
@@ -106,6 +106,7 @@ export default function ThreeJSLogo() {
          */
         const renderer: THREE.WebGLRenderer = new THREE.WebGLRenderer({
             canvas: canvas,
+            powerPreference: "high-performance",
         });
         renderer.setSize(sizes.width, sizes.height);
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -174,7 +175,7 @@ export default function ThreeJSLogo() {
             // Call tick again on the next frame
             window.requestAnimationFrame(tick);
         };
-        
+
         const animationId = window.requestAnimationFrame(tick);
         // Cleanup function
         return () => {
@@ -196,7 +197,7 @@ export default function ThreeJSLogo() {
                     alignItems: 'center',
                     justifyContent: 'center',
                 }}>
-                    <BarLoader color="hsla(168, 0%, 88%, 1)" />
+                    <CircleLoader color="white" />
                 </div>
             )}
         </div>

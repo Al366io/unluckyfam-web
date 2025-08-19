@@ -25,4 +25,5 @@ body {
     width: 100vw;
     height: 100vh;
     transition: background 0.5s, color 0.5s;
+    overflow-x: hidden;
 }

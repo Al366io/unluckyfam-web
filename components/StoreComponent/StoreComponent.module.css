@@ -3,16 +3,15 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     gap: 20px;
-    width: 100%;
+    width: 92%;
     height: 100%;
-    padding: 20px;
+    padding: 1% 20px;
 }
 
 .description {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: 20px;
     align-items: center;
     width: 100%;
 }
@@ -68,8 +67,8 @@
 .ImgGallery {
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 100%;
+    max-width: 800px;
     padding: 0px 30px 30px 30px;
 }
 
