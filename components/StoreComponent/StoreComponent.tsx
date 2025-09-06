@@ -5,6 +5,10 @@ import ImgGallery from "./ImageGallery";
 
 export default function StoreComponent(): React.JSX.Element {
 
+    // const handleBuyNow = () => {
+    //     window.location.href = "https://buy.stripe.com/eVqaEW5bn3LXg4aaj61Fe00";
+    // }
+
     return (
         <div className={StoreComponentStyles.wrapper}>
 
@@ -30,6 +34,29 @@ export default function StoreComponent(): React.JSX.Element {
                 <hr style={{ margin: "20px"}} />
 
                 {/* size choose */}
+                {/* <div className={StoreComponentStyles.sizeChoose}>
+                    <label htmlFor="size" className={StoreComponentStyles.sizeLabel}>Size:</label>
+                    <select id="size" name="size" className={StoreComponentStyles.sizeSelect}>
+                        <option value="S">Small (S)</option>
+                        <option value="M">Medium (M)</option>
+                        <option value="L">Large (L)</option>
+                        <option value="XL">Extra Large (XL)</option>
+                        <option value="XXL">Double Extra Large (XXL)</option>
+                    </select>
+
+                </div> */}
+
+                {/* color choose */}
+                {/* <div className={StoreComponentStyles.colorChoose}>
+                    <label htmlFor="color" className={StoreComponentStyles.colorLabel}>Color:</label>
+                    <select id="color" name="color" className={StoreComponentStyles.colorSelect}>
+                        <option value="black">Black</option>
+                        <option value="white">Beige</option>
+                        <option value="grey">Dark Grey</option>
+                        <option value="navy">Coffee</option>
+                        <option value="blue">Greysh Blue</option>
+                    </select>
+                </div> */}
 
                 <div className={StoreComponentStyles.priceBox}>
                     <span className={StoreComponentStyles.price}> €29,90 </span>

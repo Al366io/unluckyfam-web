@@ -3,6 +3,7 @@ import { Albert_Sans, Inter } from "next/font/google";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import styles from "./default.module.css";
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Albert_Sans({subsets: ["latin"], weight: '300'} )
 
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: {
     return (
         <html lang="en">
             <body>
+                <Analytics />
                 <main className={`${inter.className} ${styles.mainContainer}`}>
                     <Navbar />
                         {children}
